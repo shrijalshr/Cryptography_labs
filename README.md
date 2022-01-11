@@ -31,6 +31,16 @@ Client receives this data and decrypts it.
 
 Since this is asymmetric, nobody else except browser can decrypt the data even if a third party has public key of browser.
 
+**RSA Key Generation Algorithm**
+
+1. Choose two distinct large random prime numbers p and q.
+2. Compute n=pq, n is used as the modulus for both the public and private keys.
+3. Compute the totient: $Ψ(n)=(p-1)(q-1)$.
+4. Choose an integer e such that 1<e<Ψ(n), and e and Ψ(n) share no factors other than 1i.e. e and Ψ(n) are relatively prime.
+5. e is released as the public key exponent
+6. Compute d to satisfy the congruence relation ed≡1 mod Ψ(n); i.e. de=1+kΨ(n) for some integer k.
+7. d is kept as the private key exponent
+
 ## Diffie–Hellman
 
 The Diffie–Hellman (DH) Algorithm is a key-exchange protocol that enables two parties communicating over public channel to establish a mutual secret without it being transmitted over the Internet. DH enables the two to use a public key to encrypt and decrypt their conversation or data using symmetric cryptography.
