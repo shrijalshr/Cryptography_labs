@@ -4,12 +4,12 @@ It contains all the lab files (source code with some theoritical descriptions on
 
 
 <h2>Caesar Cipher</h2>
-<p> The Caesar Cipher technique is one of the earliest and simplest method of encryption technique. It’s simply a type of substitution cipher, i.e., each letter of a given text is replaced by a letter some fixed number of positions down the alphabet. For example with a shift of 1, A would be replaced by B, B would become C, and so on. The method is apparently named after Julius Caesar, who apparently used it to communicate with his officials. 
+<p> The Caesar Cipher technique is one of the earliest and simplest method of encryption technique. It’s simply a type of substitution cipher, i.e., each letter of a given text is replaced by a letter some fixed number of positions down the alphabet. For example with a shift of 1, A would be replaced by B, B would become C, and so on. The method is apparently named after Julius Caesar, who apparently used it to communicate with his officials.
 Thus to cipher a given text we need an integer value, known as shift which indicates the number of position each letter of the text has been moved down. </p>
 
 ## Hill cipher
 
-Hill cipher is a polygraphic substitution cipher based on linear algebra.Each letter is represented by a number modulo 26. Often the simple scheme A = 0, B = 1, …, Z = 25 is used, but this is not an 
+Hill cipher is a polygraphic substitution cipher based on linear algebra.Each letter is represented by a number modulo 26. Often the simple scheme A = 0, B = 1, …, Z = 25 is used, but this is not an
 essential feature of the cipher. To encrypt a message, each block of n letters (considered as an n-component vector) is multiplied by an invertible n × n matrix, against modulus 26. To decrypt the message, each block is multiplied by the inverse of the matrix used for encryption.
 
 The matrix used for encryption is the cipher key, and it should be chosen randomly from the set of invertible n × n matrices (modulo 26).
@@ -30,6 +30,16 @@ The server encrypts the data using client’s public key and sends the encrypted
 Client receives this data and decrypts it.
 
 Since this is asymmetric, nobody else except browser can decrypt the data even if a third party has public key of browser.
+
+**RSA Key Generation Algorithm**
+
+1. Choose two distinct large random prime numbers p and q.
+2. Compute n=pq, n is used as the modulus for both the public and private keys.
+3. Compute the totient: $Ψ(n)=(p-1)(q-1)$.
+4. Choose an integer e such that 1<e<Ψ(n), and e and Ψ(n) share no factors other than 1i.e. e and Ψ(n) are relatively prime.
+5. e is released as the public key exponent
+6. Compute d to satisfy the congruence relation ed≡1 mod Ψ(n); i.e. de=1+kΨ(n) for some integer k.
+7. d is kept as the private key exponent
 
 ## Diffie–Hellman
 
