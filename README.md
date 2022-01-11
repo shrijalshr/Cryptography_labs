@@ -6,6 +6,7 @@ It contains all the lab files (source code with some theoritical descriptions on
 <h2>Caesar Cipher</h2>
 <p> The Caesar Cipher technique is one of the earliest and simplest method of encryption technique. It’s simply a type of substitution cipher, i.e., each letter of a given text is replaced by a letter some fixed number of positions down the alphabet. For example with a shift of 1, A would be replaced by B, B would become C, and so on. The method is apparently named after Julius Caesar, who apparently used it to communicate with his officials. 
 Thus to cipher a given text we need an integer value, known as shift which indicates the number of position each letter of the text has been moved down. </p>
+
 ## Hill cipher
 
 Hill cipher is a polygraphic substitution cipher based on linear algebra.Each letter is represented by a number modulo 26. Often the simple scheme A = 0, B = 1, …, Z = 25 is used, but this is not an 
